@@ -39,6 +39,12 @@ body {
   background-attachment: fixed;
 }
 
+#form-convert
+{
+  display: flex;
+  flex-direction: row;
+}
+
 .gear-container {
   position: absolute;
 }

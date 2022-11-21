@@ -47,26 +47,30 @@
       </div>
 
       <div class="box">
-        <div class="ornament" id="ornament-1">
-          <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-          <div class="button" id="button-words-1">
-            <p>Upload</p>
+        <form action="upload.php" method="post" enctype="multipart/form-data" id="form-convert">
+          <div class="ornament" id="ornament-1">
+            <img class="ornament-obj" src="images/ornament-1.png" height="200px">
+            <label for="uploadFile" id="button-words-1" class="button">
+              <p>Upload</p>
+              <input type="file" id="uploadFile" name="uploadFile" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden/>
+            </label>
           </div>
-        </div>
 
-        <div class="ornament" id="ornament-2">
-          <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-          <div class="button" id="button-words-2">
-            <p>Start</p>
+          <div class="ornament" id="ornament-2">
+            <img class="ornament-obj" src="images/ornament-1.png" height="200px">
+            <label for="submit" id="button-words-2" class="button">
+              <p>Start</p>
+              <input type="submit" id="submit" hidden />
+            </label>
           </div>
-        </div>
 
-        <div class="ornament" id="ornament-3">
-          <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-          <div class="button" id="button-words-3">
-            <p>Download</p>
+          <div class="ornament" id="ornament-3">
+            <img class="ornament-obj" src="images/ornament-1.png" height="200px">
+            <div class="button" id="button-words-3">
+              <p>Download</p>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
 
       <div class="instructions">
