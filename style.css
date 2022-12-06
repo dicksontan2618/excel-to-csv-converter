@@ -1164,3 +1164,30 @@ body {
     transform: translateX(-50%);
   } */
 }
+
+.invalid{
+  font-family: hero-beam;
+font-size: 100px;
+padding-left: 10px;
+filter: drop-shadow(10px 10px 6px rgba(0, 0, 0, 0.339));
+}
+
+.invalid-page{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+
+}
+
+.invalid-picture{
+  filter: drop-shadow(10px 10px 6px rgba(0, 0, 0, 0.339));
+}
+
+.valid{
+  font-size: 30px;
+  font-family: berkeley;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
