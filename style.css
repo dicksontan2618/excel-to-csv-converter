@@ -44,7 +44,7 @@ body {
   flex-direction: row;
 }
 
-#form-convert-2 {
+/* #form-convert-2 {
   width: 93%;
   height: 90%;
   border-radius: 25px;
@@ -55,7 +55,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+} */
 
 .gear-container {
   position: absolute;
@@ -320,14 +320,19 @@ body {
 
 .drag-area {
   /* background-color: red; */
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  border: 3px dashed #009578;
+  width: 93%;
+  height: 90%;
   border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 3px dashed #009578;
 }
 
 .drag-area--over {
