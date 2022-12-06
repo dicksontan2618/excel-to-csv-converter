@@ -116,13 +116,11 @@
               <div class="excel-container">
                 <div class="speech-container">
                   <div class="talk-bubble tri-right round btm-left">
-                    <form action="upload.php" method="post" enctype="multipart/form-data" id="form-convert-2">
-                      <div class="drag-area">
+                    <div class="drag-area">
                         <div class="talktext">Choose a file or drag it here</div>
                         <!-- <div class="drag-area__thumb" data-label="myfile.txt"></div> -->
-                        <input type="file" name="uploadFile" class="drag-area__input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
-                      </div>
-                    </form>
+                        <input type="file" name="uploadFile" form="form-convert" class="drag-area__input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                    </div>
                   </div>
                 </div>
                 <div class="sub-excel-container">
