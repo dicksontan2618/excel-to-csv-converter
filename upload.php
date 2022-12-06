@@ -8,7 +8,7 @@ $output_dir = "outputs/";
 
 // Check if file already exists
 if ($target_file_ext != "xls" && $target_file_ext != "xlsx") {
-    echo "Sorry, wrong file format.";
+    header("Location: error.php");
 } else {
     if (move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $target_file_dir)) {
         if ($target_file_ext == "xls") {
@@ -22,8 +22,8 @@ if ($target_file_ext != "xls" && $target_file_ext != "xlsx") {
 
         $output_file_name = $target_file_name_without_ext . ".csv";
         exec("java -jar exceltocsvasg.jar $target_file_dir $output_file_dir");
-        header("Location: success_convert.php?converted_file={$output_file_name}");
+        header("Location: success_convert_file.php?converted_file={$output_file_name}");
     } else {
-        echo "Sorry, there was an error uploading your file.";
+        header("Location: error.php");
     }
 }

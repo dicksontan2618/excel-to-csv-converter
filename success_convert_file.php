@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <!-- <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script> -->
-  <link href="https://www.dafontfree.net/embed/Z291ZHktaGFuZHRvb2xlZC1yZWd1bGFyJmRhdGEvMjUvZy8xMjc2MjYvR291ZHlIYW5kdG9vbGVkLnR0Zg" rel="stylesheet" type="text/css"/>
-  <title>CAT201 Assignment</title>
-
+  <link rel="stylesheet" href="sub-style.css">
+  <link href="https://www.dafontfree.net/embed/Z291ZHktaGFuZHRvb2xlZC1yZWd1bGFyJmRhdGEvMjUvZy8xMjc2MjYvR291ZHlIYW5kdG9vbGVkLnR0Zg" rel="stylesheet" type="text/css" />
+  <title>
+    CAT201 Assignment
+  </title>
 </head>
 
 <body>
@@ -37,44 +37,52 @@
     <!-- <div class="archive">
       PLACEHOLDER FOR ARCHIVE
     </div> -->
-  
+
     <div class="wrapper">
       <div class="header">
         <img class="board" src="images/board.png">
         <h1 class="title">XL S to CSV Converter</h1>
       </div>
-  
-      <div class="box">
-        <form action="upload.php" method="post" enctype="multipart/form-data" id="form-convert">
-          <div class="ornament" id="ornament-1">
-            <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-            <label for="uploadFile" id="button-words-1" class="button">
-              <p>Upload</p>
-              <input type="file" id="uploadFile" name="uploadFile" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden/>
-            </label>
-          </div>
 
-          <div class="ornament" id="ornament-2">
-            <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-            <label for="submit" id="button-words-2" class="button">
-              <p class="start">Start</p>
-              <input type="submit" id="submit" hidden />
-            </label>
-          </div>
-        </form>
-        
-        <!-- <div class="ornament" id="ornament-3">
+      <div class="box">
+        <!-- <div class="ornament" id="ornament-1">
           <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-          <div class="button" id="button-words-3">
-            <p>Download</p>
+          <div class="button" id="button-words-1">
+            <p>Upload</p>
+          </div>
+        </div>
+        
+        <div class="ornament" id="ornament-2">
+          <img class="ornament-obj" src="images/ornament-1.png" height="200px">
+          <div class="button" id="button-words-2">
+            <a class="start" href="sub-index.html">Start</a>
           </div>
         </div> -->
+
+        <div class="ornament" id="ornament-3">
+          <img class="ornament-obj" src="images/ornament-1.png" height="200px">
+          <div class="button" id="button-words-3">
+            <?php
+            $converted_excel_file = $_GET['converted_file'];
+            echo '
+            <p><a style="text-decoration:none;color: transparent;" href="download.php?converted_excel_file=' . $converted_excel_file . '">Download</a></p>'
+            ?>
+          </div>
+        </div>
+
+        <div class="ornament" id="ornament-4">
+          <img class="ornament-obj" src="images/ornament-1.png" height="200px">
+          <div class="button" id="button-words-3">
+            <a href="index.html" class="return">Return</a>
+          </div>
+        </div>
       </div>
 
       <div class="instructions">
-        <p class="instruction-words" id="instruction-1">Select files by pressing 'Upload' or dragging it on the speech bubble.</p>
-        <p class="instruction-words" id="instruction-2">Press "Start" to begin the conversion!</p>
-        <!-- <p class="instruction-words" id="instruction-3">Let the file convert and you can download your csv file right afterwards</p> -->
+        <!-- <p class="instruction-words" id="instruction-1">Select files by pressing 'Upload' or dragging it on the speech bubble.</p>
+        <p class="instruction-words" id="instruction-2">Press "Start" to begin the conversion!</p> -->
+        <p class="instruction-words" id="instruction-3">Let the file convert and you can download your csv file right afterwards</p>
+        <p class="instruction-words" id="instruction-4">Return to the main page</p>
       </div>
 
       <div class="chains-container">
@@ -86,7 +94,7 @@
         <img src="images/chain.png" alt="chain" class="chain">
         <img src="images/chain.png" alt="chain" class="chain"> -->
       </div>
-  
+
       <div class="main-container">
         <div class="sub-container" id="sub-container-1">
           <div class="main-machine-part">
@@ -106,25 +114,21 @@
           </div>
           <div class="gauge-body">
             <img src="images/gauge.png" height="175px">
-            
+
           </div>
-          <div class="pointer" >
-            <img src="images/pointer.png" height="130px" >
+          <div class="pointer">
+            <img src="images/pointer.png" height="130px">
           </div>
           <div class="track">
             <div class="sub-track" id="track-1">
               <div class="excel-container">
-                <div class="speech-container">
+                <!-- <div class="speech-container">
                   <div class="talk-bubble tri-right round btm-left">
-                    <form action="upload.php" method="post" enctype="multipart/form-data" id="form-convert-2">
-                      <div class="drag-area">
-                        <div class="talktext">Choose a file or drag it here</div>
-                        <!-- <div class="drag-area__thumb" data-label="myfile.txt"></div> -->
-                        <input type="file" name="uploadFile" class="drag-area__input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
-                      </div>
-                    </form>
+                    <div class="talktext">
+                      
+                    </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="sub-excel-container">
                   <img src="images/excel 1.svg" alt="excel" class="excel">
                 </div>
@@ -181,7 +185,7 @@
         <img class="board" src="images/board.png">
         <h1 class="title">About Us</h1>
       </div>
-      
+
       <div class="people-information">
         <ul class="people">
           <li class="people-info" id="tty">
@@ -206,7 +210,7 @@
       <div class="about-us-desc">
         <p>We are 4 people from CAT201 CS USM ready to change da world with our epic programming skillz</p>
       </div>
-      
+
       <div class="scroll-container" id="scroll-up-container">
         <a href="#sec-1">
           <div class="scroll-up"></div>
@@ -217,7 +221,7 @@
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
+  <script src="sub-script.js"></script>
 </body>
 
 </html>
