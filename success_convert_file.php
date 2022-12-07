@@ -13,31 +13,7 @@
 </head>
 
 <body>
-  <!-- <div class="gear-container" id="gear-container-1">
-    <div class="gear">
-      <div class="center"></div>
-      <div class="tooth"></div>
-      <div class="tooth"></div>
-      <div class="tooth"></div>
-      <div class="tooth"></div>
-    </div> 
-  </div>
-  
-  <div class="gear-container" id="gear-container-2">
-    <div class="gear">
-      <div class="center"></div>
-      <div class="tooth"></div>
-      <div class="tooth"></div>
-      <div class="tooth"></div>
-      <div class="tooth"></div>
-    </div> 
-  </div> -->
-
   <section class="sec" id="sec-1">
-    <!-- <div class="archive">
-      PLACEHOLDER FOR ARCHIVE
-    </div> -->
-
     <div class="wrapper">
       <div class="header">
         <img class="board" src="images/board.png">
@@ -45,27 +21,13 @@
       </div>
 
       <div class="box">
-        <!-- <div class="ornament" id="ornament-1">
-          <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-          <div class="button" id="button-words-1">
-            <p>Upload</p>
-          </div>
-        </div>
-        
-        <div class="ornament" id="ornament-2">
-          <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-          <div class="button" id="button-words-2">
-            <a class="start" href="sub-index.html">Start</a>
-          </div>
-        </div> -->
-
         <div class="ornament" id="ornament-3">
           <img class="ornament-obj" src="images/ornament-1.png" height="200px">
           <div class="button" id="button-words-3">
             <?php
             $converted_excel_file = $_GET['converted_file'];
             echo '
-            <p><a style="text-decoration:none;color: transparent;" href="download.php?converted_excel_file=' . $converted_excel_file . '">Download</a></p>'
+            <p><a href="download.php?converted_excel_file=' . $converted_excel_file . '">Download</a></p>'
             ?>
           </div>
         </div>
@@ -79,20 +41,8 @@
       </div>
 
       <div class="instructions">
-        <!-- <p class="instruction-words" id="instruction-1">Select files by pressing 'Upload' or dragging it on the speech bubble.</p>
-        <p class="instruction-words" id="instruction-2">Press "Start" to begin the conversion!</p> -->
-        <p class="instruction-words" id="instruction-3">Let the file convert and you can download your csv file right afterwards</p>
+        <p class="instruction-words" id="instruction-3">Let the file convert and download your csv file right afterwards</p>
         <p class="instruction-words" id="instruction-4">Return to the main page</p>
-      </div>
-
-      <div class="chains-container">
-        <!-- <img src="images/chain.png" alt="chain" class="chain">
-        <img src="images/chain.png" alt="chain" class="chain">
-        <img src="images/chain.png" alt="chain" class="chain">
-        <img src="images/chain.png" alt="chain" class="chain">
-        <img src="images/chain.png" alt="chain" class="chain">
-        <img src="images/chain.png" alt="chain" class="chain">
-        <img src="images/chain.png" alt="chain" class="chain"> -->
       </div>
 
       <div class="main-container">
@@ -122,13 +72,6 @@
           <div class="track">
             <div class="sub-track" id="track-1">
               <div class="excel-container">
-                <!-- <div class="speech-container">
-                  <div class="talk-bubble tri-right round btm-left">
-                    <div class="talktext">
-                      
-                    </div>
-                  </div>
-                </div> -->
                 <div class="sub-excel-container">
                   <img src="images/excel 1.svg" alt="excel" class="excel">
                 </div>
@@ -157,17 +100,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="sub-container" id="sub-container-3">
-          <div class="beam"></div>
-          <div class="support-container" id="support-container-1">
-            <div class="support" id="support-1"></div>
-            <div class="support" id="support-2"></div>
-          </div>
-          <div class="support-container" id="support-container-2">
-            <div class="support" id="support-3"></div>
-            <div class="support" id="support-4"></div>
-          </div>
-        </div> -->
       </div>
       <div class="scroll-container">
         <a href="#sec-2">
@@ -190,25 +122,25 @@
         <ul class="people">
           <li class="people-info" id="tty">
             <img src="images/taiyu.png" height="300px">
-            <a class="ind-name" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Then Tai Yu</a>
+            <a class="ind-name" target=”_blank” href="https://www.linkedin.com/in/then-tai-yu/">Then Tai Yu</a>
           </li>
           <li class="people-info" id="yeo">
             <img src="images/yingsheng.png" height="300px">
-            <a class="ind-name" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Yeo Ying Sheng</a>
+            <a class="ind-name" target=”_blank” href="https://www.linkedin.com/in/yeousm/">Yeo Ying Sheng</a>
           </li>
           <li class="people-info" id="choo">
             <img src="images/brendanchoo.png" height="300px">
-            <a class="ind-name" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Brendan Choo</a>
+            <a class="ind-name" target=”_blank” href="https://www.linkedin.com/in/brendan-choo-060aa7227/">Brendan Choo</a>
           </li>
-          <li class="people-info" id="dick">
+          <li class="people-info" id="dickson">
             <img src="images/dick.png" height="300px">
-            <a class="ind-name" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Dickson Tan</a>
+            <a class="ind-name" target=”_blank” href="https://www.linkedin.com/in/dickson-tan-b37474226/">Dickson Tan</a>
           </li>
         </ul>
       </div>
 
       <div class="about-us-desc">
-        <p>We are 4 people from CAT201 CS USM ready to change da world with our epic programming skillz</p>
+        <p>Our team is established by a unity of four innovative Computer Science undergraduates from the University of Science, Malaysia.</p>
       </div>
 
       <div class="scroll-container" id="scroll-up-container">
