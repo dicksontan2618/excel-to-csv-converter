@@ -44,23 +44,6 @@ body {
   flex-direction: row;
 }
 
-/* #form-convert-2 {
-  width: 93%;
-  height: 90%;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
-
-.gear-container {
-  position: absolute;
-}
-
 .start {
   color: transparent;
   background: #4f3901;
@@ -69,75 +52,9 @@ body {
   text-decoration: none;
 }
 
-#gear-container-1 {
-  left: -50px;
-  bottom: 100px;
-}
-
-#gear-container-2 {
-  right: -100px;
-  top: 200px;
-}
-
-.gear{
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  background: rgb(102, 102, 102);
-  border-radius: 50%;
-  animation-name: spin;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.gear .center{
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  z-index: 10;
-  width: 100px;
-  height: 100px;
-  background: rgb(54, 54, 54);
-  border-radius: 50%;
-}
-
-.tooth{
-  position: absolute;
-  top: -25px;
-  left: 75px;
-  z-index: 1;
-  width: 45px;
-  height: 250px;
-  background:rgb(102, 102, 102);
-}
-
-.tooth:nth-child(2){
-  transform: rotate(45deg);
-}
-
-.tooth:nth-child(3){
-  transform: rotate(90deg);
-}
-
-.tooth:nth-child(4){
-  transform: rotate(135deg);
-}
-
-@keyframes spin {
-  from {transform: rotate(0deg); }
-  to {transform: rotate(360deg);}
-}
-
 .sec {
   width: 100%;
   min-height: 100vh;
-  /* background-color: red; */
-}
-
-#sec-2 {
-  /* background-color: blue; */
 }
 
 .archive {
@@ -161,18 +78,7 @@ body {
   flex-direction: column;
   width: 85%;
   min-height: 100vh;
-  /* background-color: red; */
   position: relative;
-  /* background-color: blue; */
-  /* padding: 50rem 3rem; */
-}
-
-#wrapper-2 {
-  /* background-color: green; */
-  /* justify-content: space-AORUN; */
-  /* position: relative; */
-  /* justify-content: space-between; */
-  /* background-color: blue; */
 }
 
 #scroll-up-container {
@@ -183,30 +89,15 @@ body {
 
 .header {
   width: 100%;
-  /* position: absolute; */
-  /* bottom: 630px; */
   top: 10px;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: yellow; */
 }
-
-/* #about-us-header {
-  position: absolute;
-  top: 10px;
-} */
-
-/* .board {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 .title {
   font-family: 'hero-beam';
-  /* text-align: center; */
   font-size: 35px;
   color: #D5AD6D;
   background: -webkit-linear-gradient(transparent, transparent),
@@ -216,10 +107,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  /* margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 45px; */
   filter: drop-shadow(5px 5px 3px black);
   -webkit-text-stroke: 0.1px rgb(132, 74, 20);
   cursor: default;
@@ -229,11 +116,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute; */
-  /* bottom: 485px; */
   top: 160px;
   width: 100%;
-  /* background-color: yellowgreen; */
 }
 
 .ornament {
@@ -242,8 +126,6 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  /* padding-left: 30px;
-  padding-right: 30px; */
 }
 
 .ornament img {
@@ -257,7 +139,6 @@ body {
   font-size: 25px;
   font-weight: 600;
   position: absolute;
-  /* justify-content: space-between; */
   color: transparent;
   background: #4f3901;
   -webkit-background-clip: text;
@@ -272,7 +153,8 @@ body {
 
 .button p, .button a {
   transition: text-shadow 0.35s, color 0.25s;
-  /* text-decoration: none; */
+  text-decoration: none;
+  color: transparent;
 }
 
 .button:hover p, .button:hover a {
@@ -293,7 +175,6 @@ body {
 .excel-container {
   width: 320px;
   height: 200px;
-  /* background-color: red; */
   position: absolute;
   bottom: 0;
   display: flex;
@@ -307,7 +188,6 @@ body {
   width: 100%;
   display: flex;
   align-items: flex-end;
-  /* background-color: green; */
 }
 
 .speech-container {
@@ -315,15 +195,12 @@ body {
   width:  100%;
   display: flex;
   position: relative;
-  /* background-color: blue; */
 }
 
 .drag-area {
   position: absolute;
-  /* background-color: red; */
   width: 60%;
   height: 40%;
-  /* border: 3px dashed #009578; */
   border-radius: 25px;
   cursor: pointer;
   font-weight: 500;
@@ -428,10 +305,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* position: absolute; */
-  /* bottom: 0; */
   top: 390px;
-  /* background-color: green; */
 }
 
 .sub-container {
@@ -445,7 +319,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: yellow; */
   position: relative;
 }
 
@@ -454,21 +327,18 @@ body {
   justify-content: space-between;
   width: 750px;
   position: relative;
-  /* background-color: white; */
 }
 
 .track {
   position: absolute;
   width: 95%;
   height: 200px;
-  /* background-color: blue; */
   bottom: 0;
   display: flex;
   justify-content: center;
 }
 
 .sub-track {
-  /* background-color: green; */
   width: 50%;
   position: relative;
   display: flex;
@@ -506,14 +376,12 @@ body {
 .sub-conveyor-belt {
   width: 96%;
   height: 80%;
-  /* background-color: rgb(246, 214, 131); */
   border-radius: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url(images/something.jpg);
   background-blend-mode: hard-light;
-  /* background-color: blue; */
 }
 
 .sub-conveyor-belt img {
@@ -619,12 +487,8 @@ body {
   bottom: 35px;
   z-index: 4;
   align-items: center;
-  animation: pointerRotate 5s infinite ease-in-out;
+  animation: pointerRotate 4s infinite ease-in-out alternate-reverse;
 }
-
-/* .cog-ani {
-  animation: gearRotate 1s linear infinite;
-} */
 
 .cog-ani-finite {
   animation: gearRotate 3s linear;
@@ -654,14 +518,7 @@ body {
   animation: horizontalMove 3s linear forwards;
 }
 
-/* @keyframes horizontalMove {
-  0% {transform: translateX(0);}
-  100%{transform: translateX(300px);}
-} */
-
 .scroll-container {
-  /* position: absolute; */
-  /* top: 720px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -672,7 +529,6 @@ body {
   position: relative;
   width: 310px;
   height: 50px;
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -767,13 +623,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute; */
-  /* bottom: 420px; */
   top: 320px;
   width: 800px;
   flex-basis: 0;
   padding: 0 60px;
-  /* background-color: blue; */
 }
 
 .instruction-words {
@@ -822,58 +675,23 @@ body {
   bottom: 10%;
 }
 
-/* .about-us-word {
-  font-family: 'hero-beam';
-  text-align: center;
-  font-size: 45px;
-  color: #D5AD6D;
-  background: -webkit-linear-gradient(transparent, transparent),
-              -webkit-linear-gradient(top, rgb(211, 198, 181) 0%, 
-              rgba(179,150,91) 50%, rgba(162,136,73) 100%);
-  background: -o-linear-gradient(transparent, transparent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 45px; 
-  filter: drop-shadow(5px 5px 3px black);
-  -webkit-text-stroke: 0.1px rgb(132, 74, 20);
-  cursor: default;
-} */
-
 .about-us-desc {
-  /* position: absolute; */
-  /* padding-top: 90px; */
   font-family: berkeley;
   font-size: 30px;
   text-align: center;
-  /* padding-left: 220px;
-  padding-right: 220px; */
   padding: 50px 100px;
-  /* top: 150px; */
-  /* background-color: blue; */
 }
 
 .people-information {
   width: 1000px;
-  /* background-color: grey; */
-  /* position: relative; */
 }
 
 .people {
-  /* position: absolute; */
-  /* position: absolute; */
   display: flex;
-  /* flex-direction: row; */
   align-items: center;
   justify-content: space-around;
-  /* padding: 30px 30px 30px 20px; */
-  /* background-color: red; */
   width: 100%;
   flex-wrap: wrap;
-  /* top: 230px; */
 }
 
 
@@ -884,7 +702,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* background-color: greenyellow; */
 }
 
 .people-info img {
@@ -894,11 +711,9 @@ body {
 
 .names {
   display: flex;
-  /* flex-direction: row; */
   align-content: center;
   justify-content: space-around;
   width: 100%;
-  /* background-color: orange; */
 }
 
 .ind-name {
@@ -906,7 +721,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: grey; */
   font-family: hero-beam;
   font-weight: 700;
   font-size: 24px;
@@ -936,7 +750,6 @@ body {
 .ind-name:visited {
   color: rgb(0, 0, 0);
 }
-
 
 @media only screen and (max-width: 1080px) {
   .instructions {
@@ -972,11 +785,6 @@ body {
     width: 750px;
     display: block;
   }
-
-  /* @keyframes horizontalMove {
-    0% {transform: translateX(0);}
-    100%{transform: translateX(250px);}
-  } */
 
   .talk-bubble {
     width: 150px;
@@ -1039,11 +847,6 @@ body {
     display: none;
   }
 
-  /* @keyframes horizontalMove {
-    0% {transform: translateX(0);}
-    100%{transform: translateX(190px);}
-  } */
-
   .button {
     font-size: 20px;
   }
@@ -1088,7 +891,6 @@ body {
   
   .ornament img {
     width: 210px;
-    /* height: 140px; */
   }
 
   .sub-container {
@@ -1101,11 +903,6 @@ body {
     display: none;
   }
 
-  /* @keyframes horizontalMove {
-    0% {transform: translateX(0);}
-    100%{transform: translateX(190px);}
-  } */
-
   .button {
     font-size: 20px;
   }
@@ -1117,16 +914,6 @@ body {
   .conveyor-belt {
     background-size: 630px 115px;
   }
-
-  /* .box, .instructions {
-    display: grid;
-    background-color: blue;
-  } */
-
-  /* .box .ornament, .instructions .instruction-words {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  } */
 
   .instructions {
     bottom: 450px;
@@ -1151,23 +938,12 @@ body {
   .people-info {
     width: 120px;
     height: 200px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;*/
     margin: 0 40px;
-    /* background-color: greenyellow; */
   }
 
   .people-information {
     width: 400px;
   }
-
-  /* .people {
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-  } */
 }
 
 .invalid{
@@ -1182,7 +958,6 @@ filter: drop-shadow(10px 10px 6px rgba(0, 0, 0, 0.339));
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
-
 }
 
 .invalid-picture{
