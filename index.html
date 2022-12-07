@@ -48,10 +48,21 @@
         <form action="upload.php" method="post" enctype="multipart/form-data" id="form-convert">
           <div class="ornament" id="ornament-1">
             <img class="ornament-obj" src="images/ornament-1.png" height="200px">
-            <label for="uploadFile" id="button-words-1" class="button">
+            
+            <div class="drag-area">
+              <!-- <div class="talktext">Choose a file or drag it here</div> -->
+              <label id="button-words-1" class="button">
+                <p>Upload</p>
+                <!-- <input type="file" id="uploadFile" name="uploadFile" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden/> -->
+              </label>
+              <input type="file" name="uploadFile" class="drag-area__input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+            </div>
+
+
+            <!-- <label for="uploadFile" id="button-words-1" class="button">
               <p>Upload</p>
               <input type="file" id="uploadFile" name="uploadFile" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden/>
-            </label>
+            </label> -->
           </div>
 
           <div class="ornament" id="ornament-2">
@@ -114,15 +125,14 @@
           <div class="track">
             <div class="sub-track" id="track-1">
               <div class="excel-container">
-                <div class="speech-container">
+                <!-- <div class="speech-container">
                   <div class="talk-bubble tri-right round btm-left">
                     <div class="drag-area">
                         <div class="talktext">Choose a file or drag it here</div>
-                        <!-- <div class="drag-area__thumb" data-label="myfile.txt"></div> -->
                         <input type="file" name="uploadFile" form="form-convert" class="drag-area__input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="sub-excel-container">
                   <img src="images/excel 1.svg" alt="excel" class="excel">
                 </div>
