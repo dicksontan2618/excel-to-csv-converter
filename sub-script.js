@@ -12,31 +12,6 @@ for(var i=0; i < cogs.length; i++){
 const excel = document.querySelector('.excel');
 const csv = document.querySelector('.csv');
 
-// start.addEventListener("click", e => {
-//   excel.classList.add('svgHorizontalMove');
-//   excel.addEventListener("animationend", e => {
-//     csv.classList.add('svgHorizontalMove');
-//     csv.addEventListener("animationend", e => {
-//       cogs.forEach(e => {
-//         e.classList.remove('cog-ani');
-//       })
-//     })
-//   })
-// })
-
-// const observer = new IntersectionObserver((entries)=>{
-//   entries.forEach((entry)=>{
-//     if(entry.isIntersecting){
-//       entry.classList.add('svgHorizontalMove');
-//     }
-//   });
-// });
-
-// const hiddenGroups = document.querySelectorAll('.excel');
-
-// hiddenGroups.forEach((el)=>observer.observe(el));
-
-
 function pageonLoad(){
   excel.classList.add('svgHorizontalMove');
   cogs.forEach(e => {
