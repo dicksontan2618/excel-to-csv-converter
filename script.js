@@ -1,5 +1,4 @@
 const cogs = document.querySelectorAll('.cog');
-// const start = document.querySelector('#button-words-2');
 var button_words = document.querySelector('#button-words-1');
 
 for(var i=0; i < cogs.length; i++){
@@ -10,11 +9,6 @@ for(var i=0; i < cogs.length; i++){
     event.target.classList.remove('cog-ani-finite');
   })
 }
-
-// const bubble_chat = document.querySelector('.speech-container');
-// start.addEventListener("click", e => {
-//   bubble_chat.classList.add('disappears');
-// })
 
 document.querySelectorAll(".drag-area__input").forEach(inputElement=>{
   const dragAreaElement = inputElement.closest(".drag-area");
@@ -67,4 +61,5 @@ function updateThumbnail(dragAreaElement, file) {
   thumbnailElement.dataset.label = file.name;
   button_words.style.visibility = "hidden";
 }
+
 
