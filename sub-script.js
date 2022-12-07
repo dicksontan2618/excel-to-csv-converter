@@ -39,6 +39,9 @@ const csv = document.querySelector('.csv');
 
 function pageonLoad(){
   excel.classList.add('svgHorizontalMove');
+  cogs.forEach(e => {
+    e.classList.add('cog-ani');
+  })
   excel.addEventListener("animationend", e => {
     csv.classList.add('svgHorizontalMove');
     csv.addEventListener("animationend", e => {

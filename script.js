@@ -1,11 +1,6 @@
 const cogs = document.querySelectorAll('.cog');
-const start = document.querySelector('#button-words-2');
-
-cogs.forEach(el => {
-  start.addEventListener("click", e => {
-    el.classList.add('cog-ani');
-  })
-})
+// const start = document.querySelector('#button-words-2');
+var button_words = document.querySelector('#button-words-1');
 
 for(var i=0; i < cogs.length; i++){
   cogs[i].addEventListener("mouseover", function(event){
@@ -16,25 +11,10 @@ for(var i=0; i < cogs.length; i++){
   })
 }
 
-const excel = document.querySelector('.excel');
-const csv = document.querySelector('.csv');
-
-start.addEventListener("click", e => {
-  excel.classList.add('svgHorizontalMove');
-  excel.addEventListener("animationend", e => {
-    csv.classList.add('svgHorizontalMove');
-    csv.addEventListener("animationend", e => {
-      cogs.forEach(e => {
-        e.classList.remove('cog-ani');
-      })
-    })
-  })
-})
-
-const bubble_chat = document.querySelector('.speech-container');
-start.addEventListener("click", e => {
-  bubble_chat.classList.add('disappears');
-})
+// const bubble_chat = document.querySelector('.speech-container');
+// start.addEventListener("click", e => {
+//   bubble_chat.classList.add('disappears');
+// })
 
 document.querySelectorAll(".drag-area__input").forEach(inputElement=>{
   const dragAreaElement = inputElement.closest(".drag-area");
@@ -85,4 +65,6 @@ function updateThumbnail(dragAreaElement, file) {
   }
 
   thumbnailElement.dataset.label = file.name;
+  button_words.style.visibility = "hidden";
 }
+
