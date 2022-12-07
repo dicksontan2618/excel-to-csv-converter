@@ -551,9 +551,9 @@ body {
   animation: pointerRotate 5s infinite ease-in-out;
 }
 
-/* .cog-ani {
+.cog-ani {
   animation: gearRotate 1s linear infinite;
-} */
+}
 
 .cog-ani-finite {
   animation: gearRotate 3s linear;
