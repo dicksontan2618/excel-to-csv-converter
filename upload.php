@@ -1,29 +1,38 @@
 <?php
-$folder_dir = "uploads/";
-$target_file_dir = $folder_dir . ($_FILES["uploadFile"]["name"]);
-$target_file_ext = strtolower(pathinfo($target_file_dir, PATHINFO_EXTENSION));
-$target_file_name = $_FILES["uploadFile"]["name"];
 
-$output_dir = "outputs/";
+error_reporting(E_ERROR | E_PARSE);
 
-// Check if file already exists
-if ($target_file_ext != "xls" && $target_file_ext != "xlsx") {
-    header("Location: error.php");
-} else {
-    if (move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $target_file_dir)) {
-        if ($target_file_ext == "xls") {
-            $target_file_name_without_ext = substr($target_file_name, 0, -4);
-            $output_file_dir = $output_dir . $target_file_name_without_ext;
-        }
-        if ($target_file_ext == "xlsx") {
-            $target_file_name_without_ext = substr($target_file_name, 0, -5);
-            $output_file_dir = $output_dir . $target_file_name_without_ext;
-        }
+$upload_file_name = $_FILES['uploadFile']['name'];
+$upload_file_name_without_space = preg_replace("/\s+/", '_', $upload_file_name);
+if ($upload_file_name_without_space != $upload_file_name) {
+    rename($upload_file_name_without_space, $upload_file_name);
+}
+$upload_file_tmp_name = $_FILES['uploadFile']['tmp_name'];
+//$upload_file_extension = strtolower(substr($name, strlen($name) - strpos(strrev($name), '.')));
+$upload_file_extension = strtolower(pathinfo($upload_file_name, PATHINFO_EXTENSION));
 
-        $output_file_name = $target_file_name_without_ext . ".csv";
-        exec("java -jar exceltocsvasg.jar $target_file_dir $output_file_dir");
-        header("Location: success_convert_file.php?converted_file={$output_file_name}");
+if ($upload_file_extension == "xls") {
+    $upload_file_name_without_extension = substr($upload_file_name_without_space, 0, -4); // file name without extension
+}
+if ($upload_file_extension == "xlsx") {
+    $upload_file_name_without_extension = substr($upload_file_name_without_space, 0, -5);
+}
+
+if (($upload_file_extension == "xls" || $upload_file_extension == "xlsx")) { // check file type
+    $location_upload = "uploads/";
+    $location_output = "outputs/";
+    if (move_uploaded_file($upload_file_tmp_name, $location_upload . $upload_file_name_without_space)) {
+
+        $converted_csv_file = $upload_file_name_without_extension . ".csv";
+        $convert_path = $location_upload . $upload_file_name_without_space;
+        $output_path = $location_output . $upload_file_name_without_extension;
+
+        exec("java -jar exceltocsvasg.jar $convert_path $output_path");
+
+        header("Location: success_convert_file.php?converted_file={$converted_csv_file}");
     } else {
-        header("Location: error.php");
+        header('Location: error.php');
     }
+} else { // if file type is not pdf
+    header('Location: error.php');
 }
