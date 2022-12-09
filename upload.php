@@ -27,7 +27,7 @@ if (($upload_file_extension == "xls" || $upload_file_extension == "xlsx")) { // 
         $convert_path = $location_upload . $upload_file_name_without_space;
         $output_path = $location_output . $upload_file_name_without_extension;
 
-        exec("java -jar exceltocsvasg.jar $convert_path $output_path");
+        exec("java -jar exceltocsv.jar $convert_path $output_path");
 
         header("Location: success_convert_file.php?converted_file={$converted_csv_file}");
     } else {
