@@ -431,7 +431,7 @@ body {
   bottom: 35px;
   z-index: 4;
   align-items: center;
-  animation: pointerRotate 5s infinite ease-in-out;
+  animation: pointerRotate 5s infinite ease-in-out alternate-reverse;
 }
 
 .cog-ani {
